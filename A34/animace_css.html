@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: myAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+/* Upravená animace */
+@keyframes myAnimation {
+  0%   {background-color: red;}    /* Začátek */
+  50%  {background-color: yellow;} /* Polovina animace */
+  100% {background-color: red;}    /* Konec (stejný jako začátek) */
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Animation</h1>
+
+<div></div>
+
+<p><b>Poznámka:</b> Animace nyní plynule přechází mezi barvami bez skoků.</p>
+
+<a href="https://www.w3schools.com/css/css3_animations.asp">Animace</a>
+
+</body>
+</html>
+
+<!--- https://www.w3schools.com/css/css3_animations.asp -->
+
