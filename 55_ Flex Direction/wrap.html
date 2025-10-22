@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Příklad Flex Wrap</title>
+    
+    <style>
+        /* --- Obecné stylování pro lepší vzhled --- */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* --- Flexbox Kontejner --- */
+        .kontejner-wrap {
+            display: flex;
+            
+            /* TOTO JE KLÍČOVÁ VLASTNOST: */
+            flex-wrap: wrap; 
+            
+            /* --- Stylování pro viditelnost --- */
+            border: 3px solid black;
+            background-color: #e0e0e0;
+            padding: 10px;
+            
+            /* Nastavíme kontejneru menší šířku, 
+              aby se položky zaručeně nevešly na jeden řádek.
+              (3 položky po 120px = 360px. Naše šířka je 380px,
+               takže se vejdou 3 a čtvrtá se musí zalomit.)
+            */
+            max-width: 580px; 
+            margin: 0 auto; /* Kontejner vycentrujeme na stránce */
+        }
+
+        /* --- Flex Položky (Děti) --- */
+        .polozka {
+            background-color: rebeccapurple;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+
+            /* Každá položka je široká 100px.
+              K tomu má 10px margin z každé strany.
+              Celkem tedy zabere 100px + 10px + 10px = 120px.
+            */
+            width: 100px; 
+            height: 100px;
+            margin: 10px;
+            
+            /* Pro hezčí vycentrování čísla uvnitř (flex uvnitř flexu) */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Příklad <code>flex-wrap: wrap;</code></h1>
+
+    <div class="kontejner-wrap">
+        <div class="polozka">1</div>
+        <div class="polozka">2</div>
+        <div class="polozka">3</div>
+        <div class="polozka">4</div>
+        <div class="polozka">5</div>
+    </div>
+
+</body>
+</html>

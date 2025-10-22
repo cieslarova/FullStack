@@ -1,0 +1,21 @@
+.nadpis {
+    text-align: center;
+    
+  }
+
+.pod_nadpis{
+    display: flex;
+    justify-content: space-between;
+    border-top:solid 1px;
+    border-bottom:solid 1px;
+    padding: 5px  ;
+
+}
+
+.levy_odstavec {
+    display: inline-block;
+    width: 200px;
+    float: left;
+    text-align: justify;
+    margin-right:20px;
+}
