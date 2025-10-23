@@ -19,3 +19,29 @@
     text-align: justify;
     margin-right:20px;
 }
+
+.prostredni_1sloupec { 
+   text-align: justify;
+  
+  
+   margin: 10px;
+   column-count: 2;
+   column-gap: 20px;
+}
+.prostredni_2sloupec{
+     text-align: justify;
+     display: inline-block;
+   
+}
+
+.prosloup_nadpis{
+    width: 410;
+   
+    
+}
+
+.hornistredni {
+    width: 410px;
+    float: left;
+    text-align: justify;
+}
