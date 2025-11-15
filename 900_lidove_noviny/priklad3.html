@@ -1,0 +1,41 @@
+Tady je kompletní HTML soubor, který kombinuje všechny koncepty, o kterých jsme mluvili.
+
+Obsahuje **dva příklady**, které vytvářejí **identický layout**, ale každý jinou metodou:
+
+1.  **Metoda 1:** Používá čísla řádků a sloupců (`grid-row`, `grid-column`).
+2.  **Metoda 2:** Používá pojmenované oblasti (`grid-area` a `grid-template-areas`).
+
+Můžete si tento kód zkopírovat, uložit jako `index.html` a otevřít v prohlížeči.
+
+```html
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Příklad</title>
+  <link rel="stylesheet" href="priklad3.css">
+</head>
+<body>
+
+  <h1>Příklad 1: Metoda čísel řádků/sloupců</h1>
+  
+  <div class="bento-grid">
+    <div id="item-1" class="box">1 (Roztahuje se přes 2 řádky)</div>
+    
+    <div id="item-2" class="box">2</div>
+    <div id="item-3" class="box">3</div>
+    
+    <div id="item-4" class="box">4 (Roztahuje se přes 2 sloupce)</div>
+
+    <div id="item-5" class="box">5</div>
+    <div id="item-6" class="box">6</div>
+    <div id="item-7" class="box">7</div>
+    <div id="item-8" class="box">8</div>
+  </div>
+
+
+  
+</body>
+</html>
+```
