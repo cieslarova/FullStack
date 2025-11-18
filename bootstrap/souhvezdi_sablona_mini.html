@@ -14,14 +14,20 @@
         crossorigin="anonymous"></script>
     <style>
         /* Vlastní styly pro doroovnání výšky obrázků */
-        img {
-            height: 200px;
+     
+
+        .carousel-item img {
+             height: 400px;
             object-fit: cover;
+            object-position: center;
         }
 
-        .carousel-item img {}
-
-        .card img {}
+        .card img {
+            height: 200px;
+            
+            object-fit: cover;
+            object-position: center;
+        }
     </style>
 </head>
 
@@ -30,7 +36,38 @@
       Komponenta Navbar: Hlavní navigační lišta
       .navbar: Základní třída pro navigaci
     -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#planety">Planety</a>
+        </li>
 
+           <li class="nav-item">
+          <a class="nav-link" href="#konstelace">Konstelace</a>
+        </li>
+
+           <li class="nav-item">
+          <a class="nav-link" href="#hvezdna_obloha">Hvěhdná obloha</a>
+        </li>
+     
+       
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
 
     <!-- 
       Komponenta CAROUSEL (Kolotoč/Slideshow)
@@ -77,16 +114,14 @@
       HLAVNI KONTEJNER ===========================================================================
       .container: Kontejner s pevnou šířkou, která se mění podle breakpointů (centruje obsah)
     -->
-    <div class="">
+    <div class="container">
         <!-- 
           Pomocné třídy (Utilities)
           .text-center: Vycentruje text
           .p-1: Malý padding (vnitřní odsazení)
           .mb-3: Střední margin bottom (vnější odsazení dole)
           .mt-1: Malý margin top (vnější odsazení nahoře)
-        -->
-        <h1 class="">Sluneční soustava</h1>
-        <!-- 
+        --> <!-- 
           .w-100: Width 100%
           .bg-dark-subtle: Jemné tmavé pozadí
           .p-5: Velký padding
@@ -96,6 +131,9 @@
           další clasa - w-100 bg-dark-subtle p-5 mb-3 rounded-3
         -->
         <div class="container">
+            
+        <h1 class="text-center p-5 mb-3 mt-1">Sluneční soustava</h1>
+       
             <p>
                 Sluneční soustava je planetární systém hvězdy známé pod názvem Slunce, ve kterém se nachází planeta
                 Země.
@@ -114,19 +152,19 @@
               .btn-primary: Modré (primární) tlačítko
               .btn-lg: Velké tlačítko
             -->
-            <button type="button" class="">Sluneční soustava</button>
+            <button type="button" class="btn btn-primary btn-lg ">Sluneční soustava</button>
         </div>
         <!-- .fs-1: (Font Size 1) Největší velikost písma 
          H2 - fs-1 p-1 mt-1 mb-3 text-center 
          -->
-        <h2 id="planety" class="">Objekty sluneční soustavy</h2>
+        <h2 id="planety" class="fs-1 p-1 mt-1 mb-3 text-center">Objekty sluneční soustavy</h2>
 
         <!-- ZDE ZAČÍNAJI KARTY PLANET ===================================================================
           Grid systém (Mřížka)
           .row: Definuje řádek, který obsahuje sloupce
 
         -->
-        <div class="">
+        <div class="row">
             <!-- .col: Definuje sloupec. Bez čísla se sloupce v řádku rovnoměrně rozdělí. -->
             <div class="col">
                 <!-- Karta 1  ================================================================================ -->
@@ -136,15 +174,15 @@
                   druhy class - card-body
                   P - card-text
                 -->
-                <div class="">
+                <div class="card">
                     <!-- .card-img-top: Umístí obrázek na vrchol karty -->
-                    <img src="img/slunce.jpg" class="" alt="...">
+                    <img src="img/slunce.jpg" class="card-img-top" alt="...">
                     <!-- .card-body: Kontejner pro obsah karty -->
-                    <div class="">
+                    <div class="card-body">
                         <!-- .card-title: Styl pro nadpis karty -->
-                        <h5 id="slunce" class="">Slunce</h5>
+                        <h5 id="slunce" class="card-title">Slunce</h5>
                         <!-- .card-text: Styl pro text v kartě -->
-                        <p class="">
+                        <p class="card-text">
                             Slunce je hvězda ve středu Sluneční soustavy. Od Země je vzdálena 1 au (asi 150 milionů km),
                             jde tedy o
                             hvězdu nejbližší Zemi. Obíhá okolo středu Mléčné dráhy ve vzdálenosti od 25-28 tisíc
@@ -154,41 +192,41 @@
                             představuje 99,8 % hmotnosti sluneční soustavy, ale jen asi 2 % jejího momentu hybnosti.
                             Astronomický symbol pro Slunce ☉
                         </p>
-                        <a href="#" class="">Číst více</a>
+                        <a href="#" class="btn btn-primary">Číst více</a>
                     </div>
                 </div>
             </div>
-            <div class="">
+            <div class="col">
                 <!-- Karta 2  ================================================================================ -->
-                <div class="">
-                    <img src="img/jupiter.jpg" class="" alt="...">
-                    <div class="">
-                        <h5 class="">Jupiter</h5>
-                        <p class="">
+                <div class="card">
+                    <img src="img/jupiter.jpg" class="card-img-top" alt="...">
+                    <div class="card-title">
+                        <h5 class="card-body">Jupiter</h5>
+                        <p class="card-text">
                             Jupiter je největší planeta sluneční soustavy, v pořadí pátá od Slunce. Má hmotnost
                             přibližně jedné tisíciny Slunce, což je přibližně 2,5x více než všechny ostatní planety (a
                             další menší tělesa) v soustavě dohromady, proto je sluneční soustava někdy popisována jako
                             dvojsystém Slunce a Jupitera. Planety Jupiter, Saturn, Uran a Neptun jsou označovány jako
                             plynní obři či planety jupiterského typu. Astronomický symbol pro Saturn je: ♃
                         </p>
-                        <a href="#" class="">Číst více</a>
+                        <a href="#" class="btn btn-primary">Číst více</a>
                     </div>
                 </div>
             </div>
-            <div class="">
+            <div class="col">
                 <!-- Karta 3  ================================================================================ -->
-                <div class="">
-                    <img src="img/Saturn.jpg" class="" alt="...">
-                    <div class="">
-                        <h5 class="">Saturn</h5>
-                        <p class="">
+                <div class="card">
+                    <img src="img/Saturn.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Saturn</h5>
+                        <p class="card-text">
                             Saturn je v pořadí planet na šestém místě a po Jupiteru druhá největší planeta sluneční
                             soustavy. Planeta byla pozorována již starověkými astronomy a byla pojmenována po římském
                             bohu Saturnovi, který byl obdobou řeckého boha Krona. Starší české jméno pro tuto planetu
                             bylo Hladolet. Saturn patří mezi velké plynné obry, pro které je typické, že nemají pevný
                             povrch, ale pouze hustou atmosféru. Astronomický symbol pro Saturn je ♄.
                         </p>
-                        <a href="#" class="">Číst více</a>
+                        <a href="#" class="btn btn-primary">Číst více</a>
                     </div>
                 </div>
             </div>
@@ -197,15 +235,15 @@
 
     <!-- Hvězdné konstelace -->
 
-    <h3 id="konstelace" class="">Konstelace hvězd na obloze</h3>
+    <h3 id="konstelace" class="fs-1 p-1 mt-1 mb-3 text-center">Konstelace hvězd na obloze</h3>
     <!-- 
       Flexbox utility
       .d-flex: Zapne display: flex
       .justify-content-center: Vycentruje obsah horizontálně
       .mb-5: Velký margin bottom
     -->
-    <div class="">
-        <img src="img/starmap-large_black.png" class="" alt="hvězdná obloha">
+    <div class="d-flex justify-content-center mb-5">
+        <img src="img/starmap-large_black.png" class="d-block v-100" alt="hvězdná obloha">
     </div>
 
     <!-- Pata stránky-->
@@ -216,8 +254,8 @@
           .text-center: Vycentrovat text
           .p-3: Střední padding
         -->
-        <div class="">
-            © 2025 Hvězdná obloha. Bootstrap tutorial, 
+        <div class="bg-dark text-white text-center p-3">
+            © 2025 Hvězdná obloha. Bootstrap tutorial, Elen
         </div>
     </footer>
 
