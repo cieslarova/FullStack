@@ -1,0 +1,125 @@
+    /* --- Základní styly --- */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      padding: 20px;
+    }
+                                                                                                             
+    h1 {
+      text-align: center;
+      color: #111;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    /* Společný styl pro všechny boxy */
+    .box {
+      background-color: #0071FF;
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      /* Přidáno pro lepší vzhled obsahu */
+      display: grid;
+      place-items: center;
+    }
+
+    /* --- Společná definice mřížky --- */
+    .bento-grid {
+      display: grid;
+      /* Definujeme 3 sloupce: 
+        1. 250px
+        2. 250px
+        3. 450px
+      */
+      grid-template-columns: 250px 250px 450px;
+      
+      /* Definujeme 2 řádky:
+        1. 250px
+        2. 250px
+      */
+      grid-template-rows: 250px 250px 250px 250px;
+      
+      /* Mezera mezi všemi buňkami */
+      gap: 10px;
+      
+      /* Odsazení pro oddělení příkladů */
+      margin-bottom: 50px;
+      
+      /* Vystředění mřížky na stránce */
+      justify-content: center;
+    }
+
+
+    /* =======================================================
+    PŘÍKLAD 1: Umístění pomocí ČÍSEL ŘÁDKŮ A SLOUPCŮ
+    =======================================================
+    */
+
+    /* #item-1 se má roztáhnout od čáry 1 do čáry 3 (přes 2 řádky) */
+    #item-1 {
+      grid-row: 1 / 3;
+      background-color: #E60023; /* Jiná barva pro zvýraznění */
+    }
+
+    /* #item-4 se má roztáhnout od čáry 2 do čáry 4 (přes 2 sloupce) */
+    #item-4 {
+      grid-column: 2 / 4;
+      background-color: #00A36C; /* Jiná barva pro zvýraznění */
+    }
+      #item-8 {
+      grid-column: 1 / 4;
+      background-color: #00A36C; /* Jiná barva pro zvýraznění */
+    }
+    
+
+
+    /* =======================================================
+    PŘÍKLAD 2: Umístění pomocí POJMENOVANÝCH OBLASTÍ
+    =======================================================
+    */
+
+    /* Definujeme "mapu" mřížky.
+      Každý řetězec je jeden řádek.
+      Opakování jména = roztažení.
+    */
+    .bento-grid-named {
+      grid-template-areas: 
+        "prvni  druhy  treti"
+        "prvni  ctvrty ctvrty";
+    }
+
+    /* Nyní přiřadíme jednotlivým ID jména oblastí z "mapy".
+      Toto je ten kód, na který jste se ptal: grid-area: jméno;
+    */
+    
+    /* Tento prvek půjde do oblasti "prvni" */
+    #named-1 {
+      grid-area: prvni;
+      background-color: #E60023; /* Jiná barva pro zvýraznění */
+    }
+
+    /* Tento prvek půjde do oblasti "druhy" */
+    #named-2 {
+      grid-area: druhy;
+    }
+    
+    /* Tento prvek půjde do oblasti "treti" */
+    #named-3 {
+      grid-area: treti;
+    }
+
+    /* Tento prvek půjde do oblasti "ctvrty" */
+    #named-4 {
+      grid-area: ctvrty;
+      background-color: #00A36C; /* Jiná barva pro zvýraznění */
+    }
+
+    /* POZNÁMKA:
+      Položky #named-5, #named-6 atd. nemají přiřazenou oblast.
+      Grid se je pokusí umístit do prvních volných buněk, 
+      které NEJSOU definovány v `grid-template-areas`.
+      V našem případě se tedy umístí až ZA definované 2 řádky.
+    */
