@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function showAlert() {
+            var tweet = prompt("ahoj jak se mas?");
+            var tweetLength = tweet.length;
+            alert("you have written " + tweetLength + " characters, you have " + (140 - tweetLength) + " characters remaining.");
+
+        }
+    </script>
+    <button onclick="showAlert()">
+        stiskni me
+    </button>
+</body>
+</html>
